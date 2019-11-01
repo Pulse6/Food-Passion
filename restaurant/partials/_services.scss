@@ -1,0 +1,41 @@
+.services {
+    .wrapper {
+        text-align: center;
+        @include flex(center, center);
+        flex-direction: column;
+    }
+    span {
+        color: $secondaryTextColour;
+    }
+    h2 {
+        font-family: $font-stack-Great;
+        @include fontSize(45);
+        padding-bottom: 2%;
+    }
+    h3 {
+        color: $secondaryTextColour;
+        @include fontSize(18);
+        padding: 5% 0;
+        letter-spacing: 5px;
+    }
+    img {
+        max-width: 25%;
+    }
+    .one {
+        min-height: 25vh;
+        @include flex(center, center);
+        flex-direction: column;
+        max-width: 70%;
+    }
+    .two {
+        min-height: 30vh;
+        max-width: 90%;
+    }
+    .two ul {
+        @include flex(space-between, center);
+    }
+    .two ul li {
+        line-height: 130%;
+        padding: 0 1%;
+    }
+}

@@ -1,0 +1,43 @@
+.aboutOurChefs {
+    background-color: $primaryBackgroundColour;
+    .wrapper {
+        min-height: 50vh;
+        @include flex(center, center);
+    }
+    div {
+        flex: 1;
+    }
+    span {
+        color: $secondaryTextColour;
+    }
+    h2 {
+        font-family: $font-stack-Great;
+        @include fontSize(70);
+        font-weight: 300;
+    }
+    .icon {
+        @include flex(left, center);
+    }
+    .icon img{
+        max-width: 10%;
+        border-radius: 50%;
+        border: 2px solid #fff;
+    }
+    .icon p {
+        padding-left: 2%;
+        @include fontSize(25);
+        span {
+            @include fontSize(16);
+        }
+    }
+    p {
+        padding: 2% 0;
+    }
+    .lineHeight {
+        line-height: 180%;
+    }
+    .slide {
+        @include fontSize(50);
+        letter-spacing: 30px;
+    }
+}

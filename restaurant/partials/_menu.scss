@@ -1,0 +1,54 @@
+.menu {
+    background-image: url(/styles/assets/image-13.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+  .warpper {
+    position: relative;
+    height: 90vh;
+  }
+  span {
+    color: $secondaryTextColour;
+  }
+  h2 {
+    font-family: $font-stack-Great;
+    @include fontSize(40);
+    padding-bottom: 5%;
+  }
+  .menuInfo {
+      @include flex(space-between, center);
+      text-align: left;
+      padding: 3% 0;
+      @include fontSize(16);
+  }
+  .menuInfo ul {
+      @include flex(space-between, center);
+      padding: 3% 5%;
+  }
+  .swiper-container {
+    width: 100%;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .swiper-slide {
+    @include fontSize(14);
+    /* Center slide text vertically */
+    @include flex(center, center);
+    flex-direction: column;
+    text-align: center;
+  }
+  button {
+    border: 2px solid $secondaryTextColour;
+  }
+  a {
+    background-color: $secondaryTextColour;
+    @include fontSize(12);
+    color: $primaryColour;
+    padding: 20px 50px;
+    &:hover {
+      background-color: $primaryColour;
+      color: $secondaryTextColour;
+    }
+  }
+}

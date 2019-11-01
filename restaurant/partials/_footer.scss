@@ -1,0 +1,134 @@
+footer {
+  .map {
+    min-width: 100%;
+  }
+  .footer {
+    min-height: 50vh;
+    background-color: $primaryTextColour;
+    color: $primaryTextLight;
+    text-align: center;
+  }
+  // media
+  .footer img {
+    max-width: 60%;
+  }
+  .footer .wrapper {
+    padding: 2% 0;
+  }
+  .gotToFlex {
+    @include flex(space-between, center);
+  }
+  .spical {
+    color: $secondaryTextColour;
+  }
+  h2 {
+    font-family: $font-stack-Great;
+    @include fontSize(40);
+    padding: 5%;
+  }
+  i {
+    padding: 10px;
+    color: $primaryTextLight;
+  }
+  .contact {
+    background-color: $primaryColour;
+    transform: translateY(-100px);
+  }
+  form {
+    width: 500px;
+    height: 300px;
+    overflow: hidden;
+    // position: absolute;
+  }
+  // end of media
+  //   css for name and email input
+  .form span {
+    border: none;
+    outline: none;
+    background-color: none;
+    text-shadow: none;
+  }
+  form .container {
+    @include fontSize(16);
+    width: 100%;
+    position: relative;
+    height: 50px;
+    // padding: 2% 0;
+  }
+  .container input {
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    border: none;
+    outline: none;
+  }
+  .container label {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 1px solid #000;
+  }
+  .form label::after {
+    content: "";
+    position: absolute;
+    left: 0%;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid $primaryTextColour;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  .content {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+  }
+  .form input:focus + .label .content,
+  .form input:valid + .label .content {
+    transform: translateY(-150%);
+    @include fontSize(14);
+  }
+  .form input:focus + .label::after,
+  .form input:valid + .label::after {
+    transform: translateX(0%);
+  }
+  //   form #message{
+  //     height: 100px;
+  //   }
+  .submit {
+      margin: 10% 0 0 0;
+      padding: 4% 8%;
+      color: $primaryColour;
+      background-color: $secondaryTextColour;
+      border: 1px solid $secondaryTextColour;
+      &:hover {
+          background-color: $primaryColour;
+          color: $secondaryTextColour;
+      }
+  }
+  //  end of css for name and email input
+  .location {
+    text-align: left;
+    @include fontSize(14);
+    .gottoflexleft {
+      @include flex(left, start);
+      margin: 5% 0;
+    }
+    img {
+      max-width: 10%;
+      margin-right: 20px;
+    }
+    p {
+      line-height: 150%;
+    }
+  }
+  .copyright {
+    max-height: 0vh;
+    transform: translateY(-50px);
+  }
+}

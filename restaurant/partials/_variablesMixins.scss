@@ -1,0 +1,34 @@
+// variables
+$primaryColour: #FFF;
+$primaryLight: lighten($primaryColour, 25);
+$primaryDark: darken($primaryColour, 25);
+
+$secondaryColour: rgba(246, 247, 249, 0.9);
+
+$primaryTextColour: #23292c;
+$primaryTextColourDark: darken($primaryColour, 100);
+$primaryTextLight: lighten($primaryTextColour, 25);
+$secondaryTextColour: #e1560e;
+$secondaryBackgrounColourlight: rgba(230, 33, 49, 0.03);
+
+$primaryBackgroundColour: #eae5d6;
+
+// Colours
+// Orange #e1560e
+// Dark Grey #23292c
+// Beige #eae5d6
+
+// mixins
+
+// fontSize;
+@mixin fontSize($sizeValue) {
+	font-size: $sizeValue * 1px;
+	font-size: ($sizeValue/10) * 1rem;
+}
+
+// flex 
+@mixin flex($just,$align) {
+	display: flex;
+	justify-content: $just;
+	align-items: $align;
+}

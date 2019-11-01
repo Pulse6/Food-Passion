@@ -1,0 +1,31 @@
+.ourGallery {
+    background-color: $primaryTextColour;
+    color: $primaryColour;
+    span {
+        color: $secondaryTextColour;
+    }
+    h2 {
+        font-family: $font-stack-Great;
+        @include fontSize(40);
+        padding-bottom: 3%;
+    }
+    p {
+        font-style: italic;
+    }
+    div:nth-child(1) {
+        min-height: 30vh;
+        @include flex(center, center);
+        flex-direction: column;
+        max-width: 50%;
+        text-align: center;
+    }
+    div:nth-child(2) {
+        // @include flex(space-between, center);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    div:nth-child(2) img {
+        // min-width: 15%;
+        max-width: 20%;
+    }
+}

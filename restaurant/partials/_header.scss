@@ -1,0 +1,63 @@
+header {
+    background: url(/styles/assets/image-1.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    .wrapper {
+        position: relative;
+    }
+    nav {
+        color: $primaryTextColour;
+        position: fixed;
+        min-height: 8vh;
+        left: 0;
+        right: 0;
+        @include flex(space-between, center);
+        background-color: rgba(35, 41, 44, 0.6);
+        z-index: 100;
+    }
+    .logo {
+        padding-left: 50px;
+        max-width: 66%;
+    }
+    ul {
+        @include flex(space-between, center);
+        li {
+            padding: 0 5px;
+        }
+        a {
+            font-weight: 700;
+            padding: 10px 15px;
+            text-shadow: 0 -1px 2px #fff;
+            transition: all 0.5s;
+            cursor: pointer;
+            &:hover {
+                color: $primaryColour;
+                transform: scale(1.25);
+            }
+        }
+    }
+    section {
+        min-height: 100vh;
+        @include flex(center, center);
+        flex-direction: column;
+        img {
+            max-width: 60%;
+            padding-bottom: 8%;
+            opacity: 0.9;
+        }
+        button {
+            
+            border: 2px solid $secondaryTextColour;
+        }
+        a {
+            background-color: $secondaryTextColour;
+            @include fontSize(12);
+            color: $primaryColour;
+            padding: 20px 50px;
+            &:hover {
+                background-color: $primaryColour;
+                color: $secondaryTextColour;
+            }
+        }
+    }
+}
